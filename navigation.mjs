@@ -1,0 +1,3 @@
+export function pageLocation(s){return {page:s.page,current:s.current};}
+export function recordNavigation(s,previous){s.navigationHistory??=[];if(previous.page!==s.page||previous.current!==s.current){const last=s.navigationHistory.at(-1);if(!last||last.page!==previous.page||last.current!==previous.current)s.navigationHistory.push(previous);}}
+export function backInGame(s){s.navigationHistory??=[];while(s.navigationHistory.length){const prior=s.navigationHistory.pop();if(prior.page===s.page&&prior.current===s.current)continue;s.page=prior.page;s.current=prior.current;return true;}return false;}

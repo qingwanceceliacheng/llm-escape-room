@@ -1,1 +1,6 @@
-{"name":"llm-escape-room","version":"1.0.0","type":"module","scripts":{"start":"node server.mjs","test":"node --test test.mjs"}}
+{
+  "name": "llm-escape-room",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {"start": "node server.mjs", "test": "node --test connected.test.mjs render.test.mjs"}
+}
